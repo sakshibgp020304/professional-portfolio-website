@@ -1,0 +1,214 @@
+.hero{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 50px 5% 70px;
+}
+
+.hero__bg{
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero__grid{
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 40%, transparent 90%);
+}
+
+.hero__orb{
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: .55;
+  animation: float 10s ease-in-out infinite;
+}
+
+.hero__orb--cyan{
+  width: 420px;
+  height: 420px;
+  background: var(--cyan);
+  top: -120px;
+  right: 5%;
+}
+
+.hero__orb--violet{
+  width: 380px;
+  height: 380px;
+  background: var(--violet);
+  bottom: -100px;
+  left: 0;
+  animation-delay: -4s;
+}
+
+@keyframes float{
+  0%, 100%{ transform: translate(0, 0); }
+  50%{ transform: translate(30px, -30px); }
+}
+
+.hero__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.hero__content{
+  max-width: 620px;
+  animation: fadeInUp .9s ease both;
+}
+
+.hero__name{
+  font-family: var(--font-display);
+  font-size: clamp(38px, 6vw, 66px);
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 6px 0 4px;
+  background: linear-gradient(90deg, #fff, var(--cyan) 60%, var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__role{
+  font-family: var(--font-mono);
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: 500;
+  color: var(--text-dim);
+  margin-bottom: 22px;
+  min-height: 32px;
+}
+
+.hero__cursor{
+  color: var(--cyan);
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink{
+  50%{ opacity: 0; }
+}
+
+.hero__intro{
+  font-size: 16.5px;
+  color: var(--text-dim);
+  max-width: 520px;
+  margin-bottom: 34px;
+}
+
+.hero__actions{
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+
+.hero__actions .btn {
+  text-decoration: none !important;
+}
+
+.hero__actions .btn-outline {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: rgba(0, 238, 255, 0.08);
+}
+
+.hero__actions .btn-outline:hover {
+  color: #050b18;
+  background: var(--cyan);
+  border-color: var(--cyan);
+}
+
+.hero__socials{
+  display: flex;
+  gap: 14px;
+}
+
+.hero__socials a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  color: var(--text-dim);
+  font-size: 18px;
+  text-decoration: none;
+  transition: all .35s ease;
+}
+
+.hero__socials .social-text{
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero__socials a:hover{
+  color: var(--bg);
+  background: linear-gradient(120deg, var(--cyan), var(--violet));
+  border-color: transparent;
+  transform: translateY(-4px);
+}
+
+.hero__image-wrap{
+  position: relative;
+  flex-shrink: 0;
+  width: 340px;
+  height: 340px;
+  animation: floatImg 5s ease-in-out infinite;
+}
+
+@keyframes floatImg{
+  0%, 100%{ transform: translateY(0); }
+  50%{ transform: translateY(-18px); }
+}
+
+.hero__image-glow{
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--cyan), var(--violet), var(--cyan));
+  filter: blur(30px);
+  opacity: .55;
+}
+
+.hero__image{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 1%;
+  border-radius: 50%;
+  border: 6px solid rgba(255,255,255,0.08);
+  z-index: 1;
+}
+
+@keyframes fadeInUp{
+  from{ opacity: 0; transform: translateY(24px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px){
+  .hero__inner{
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero__intro{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero__actions, .hero__socials{
+    justify-content: center;
+  }
+  .hero__image-wrap{
+    width: 240px;
+    height: 240px;
+  }
+}
