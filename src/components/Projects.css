@@ -1,13 +1,14 @@
 .projects__grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .project-card{
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  /* height: 390px; */
 }
 
 .project-card__image{
