@@ -114,13 +114,13 @@ function Hero() {
             </a>
 
             <a
-              href={personalInfo.socials.hackerrank}
+              href={personalInfo.socials.facebook}
               target="_blank"
               rel="noreferrer"
-              aria-label="HackerRank"
+              aria-label="Facebook"
               className="social-text"
             >
-              HR
+              FB
             </a>
           </div>
         </div>

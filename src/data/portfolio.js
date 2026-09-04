@@ -19,7 +19,7 @@ export const personalInfo = {
     linkedin:
       "https://www.linkedin.com/in/sakshi-singh-067595394?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     leetcode: "https://leetcode.com/u/sakshi-singh-p",
-    facebook: "https://facebook.com/",
+    facebook: "https://www.facebook.com/share/1D7ax9tq42/",
   },
 };
 
@@ -106,6 +106,13 @@ export const projects = [
 
 export const education = [
   {
+    course: "Java Full Stack Development + AI",
+    institute: "DUCAT India, Noida Extension",
+    year: "9 Months",
+    description:
+      "Completed 9 months of professional training in Java Full Stack Development and Artificial Intelligence.",
+  },
+  {
     course: "BCA (Java Full Stack Development)",
     institute: "Oxford Business College, Patna",
     year: "2023 – 2026",
@@ -117,11 +124,5 @@ export const education = [
     institute: "Muslim Minority College Bhagalpur",
     year: "2023",
     description: "Completed senior secondary education.",
-  },
-  {
-    course: "10th Standard",
-    institute: "Sri Ramkrishna Vidya Mandir",
-    year: "2021",
-    description: "Completed secondary education.",
   },
 ];
