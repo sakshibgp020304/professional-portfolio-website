@@ -13,7 +13,7 @@ export const personalInfo = {
   location: "Patna, Bihar, India",
   mapsUrl: "https://www.google.com/maps/place/Patna,+Bihar",
   resumeUrl: "public/resume/Sakshi-Singh-Resume (1).pdf",
-  profileImage: "/hero-image.jpeg",
+  profileImage: profileImage: import.meta.env.BASE_URL + "hero-image.jpeg",
   socials: {
     github: "https://github.com/sakshibgp020304-creator",
     linkedin:
@@ -54,7 +54,7 @@ export const projects = [
       "A responsive personal portfolio built with React and plain CSS, featuring glassmorphism UI and scroll animations.",
     longDescription:
       "This portfolio was designed from scratch to showcase my projects and skills as a Java Full Stack learner. It uses a dark navy theme with cyan and violet accents, glassmorphism cards, and scroll-reveal animations, all built without any UI framework.",
-    image: "/portfolio-project.jpg",
+    image: image: import.meta.env.BASE_URL + "portfolio-project.jpg",
     tech: ["React", "Vite", "CSS3", "JavaScript"],
     liveUrl: "",
     githubUrl: "",
@@ -72,7 +72,7 @@ export const projects = [
       "A web application for managing blood donors, blood groups, blood availability and emergency blood requirements.",
     longDescription:
       "Blood Bank Management System is a web application developed using PHP, MySQL, HTML, CSS and JavaScript that helps manage donor records, blood groups and blood availability. It provides an easy-to-use interface for registering donors, searching for required blood groups and managing blood-related records efficiently.",
-    image: "/blood-bank.png",
+    image: image: import.meta.env.BASE_URL + "blood-bank.png",
     tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
     liveUrl: "",
     githubUrl: "",
@@ -91,7 +91,7 @@ export const projects = [
       "A web application for conducting and managing online examinations end-to-end.",
     longDescription:
       "OTMS is a full Java web application built with JSP/Servlets, MySQL and Maven/Tomcat that lets admins create tests and students attempt them online, with automatic evaluation and result tracking.",
-    image: "/test-management.jpg",
+    image: image: import.meta.env.BASE_URL + "test-management.jpg",
     tech: ["JSP", "Servlets", "MySQL", "Maven", "Tomcat"],
     liveUrl: "",
     githubUrl: "",
